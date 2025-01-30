@@ -1,0 +1,168 @@
+/* General Reset */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Progress Circle */
+.progress-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.progress-circle {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    /* Increased size */
+    height: 150px;
+    /* Increased size */
+}
+
+.progress-circle svg {
+    transform: rotate(-90deg);
+    width: 150px;
+    /* Increased size */
+    height: 150px;
+    /* Increased size */
+}
+
+.progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+    /* Increased stroke width for better visibility */
+    cx: 75;
+    cy: 75;
+    r: 60;
+    /* Adjusted radius to fit the new size */
+}
+
+.progress-circle .bg {
+    stroke: #e0e0e0;
+}
+
+.progress-circle .progress {
+    stroke: #4caf50;
+    stroke-dasharray: 376.8;
+    /* Adjusted for new radius */
+    stroke-dashoffset: calc(376.8 - (376.8 * 60 / 100));
+    /* 60% Progress */
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    /* Increased font size for better readability */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button,
+.tertiary-button,
+.update-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.secondary-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.tertiary-button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.update-button {
+    background-color: #ffc107;
+    color: #000;
+    margin-top: 10px;
+}
+
+/* Hover Effects */
+.primary-button:hover {
+    background-color: #0056b3;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268;
+}
+
+.tertiary-button:hover {
+    background-color: #218838;
+}
+
+.update-button:hover {
+    background-color: #e0a800;
+}
